@@ -2,7 +2,7 @@
 // @name         哔哩哔哩 精简丨bilibili Streamline
 // @namespace    https://github.com/Mue-linsi/Webpage-Pure/
 // @version      0.1.0
-// @description  萌新随便写的
+// @description  阿巴阿巴
 // @author       聆巳
 // @match        *://*.bilibili.com/*
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAhCAMAAABkz+JgAAABFFBMVEVMaXH/8ePZkYDbmIbVkIDdloP97d/86t3alILasKrXk4Tjt6vw18rPjIKgfo/hs6a2kJvQmpP35dj66Nv39/nt0cbcno7OlInpy8Dy3NDQnpbXrKP+///bs63eraDqmZvOp6fKj4rVpZ61k5fHqqy7bGnCusizhY7VvsTbopqibndAHEynbWqwp7vFnqC/ioy2fX+xeHq9oafdtazrn57OsrDbrKGxiZHWxc3EkYvmlJfqqqjm4OXIh4HIbW/y7/GxcG/L2Oqogo27gX3Vn5SPgJ7k3ufUz9idaGykb3Xt08ykj6Ojk6n89u/blIHSjHvgpZTUk4f24dTMhXuvbmbsvKnnsp/mvbLjxbvqxLzp5OmtdHC9FZv4AAAAW3RSTlMA/v7+/v7+/v4C/v7+/Rn+Lej+/v3+/v7+/v77/v39/nbNsP7+/fpHS/5hCM79kqp7tv62/v7SY2v8/v73v/795/7+9b39uf2c+emLwvz////////////////+mXyWBQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAxlJREFUOI1dk+d22zgQhdEBdpGgSHVZ3WruvTs9uzmEWFT9/u+RQzlWtHt/DTDfAe5gMAB8SAPAvj5uua7rXrWPDu3tzt+stl0Njm8tIgSKIkHiintU2IPeI+0oJEjkioSgApGwerCDNFC4uR6D0zgnoncRIQRSlQ9IA4f1Yfx4SnZAFImU0EgIEn5AhQohekfRHSLQzIy3AakfvkPnS0JvO5FAAiESiS3DlxYVRI+Tf+xtvaZJqJUqkQYNQojChFB9ZpRimipiFNs5c9AIEFVKpUQQReMQEYIxspKVpSuKsDUCGjgnSERKoZRQpUS4inUcBLOgVK7rmFIUWQMArjDOGaIIVTo24DKYLRaLRRnyBsY0sixrAFyEsVBIKURJMCuyxGnM53OjzFlS0XFERienwBUYY0VVSnOrkvPiMGcS5sGVhYV+AgBwcRAERAglMA5M2FlBY240DNbtQlkRQjwCDbRms9lMF0gJrNeh+ekSlubLYol3zjgzkC5aYwDa1S+LRRgJJahegsWzS1Z0iowl3bMEOsj63AIAHJwfzBvHgiqE9XXOQDN35eVMQ38cnORNHwzmV9e6HqaYLKH36RJ6HuccdjpMDq3ccS7bOS/EjhmGyGDMTDjnknNWLsNyWDl676kGzttjd+XUS/FQcsik5FJKyRhPSqs/DACFAnDXjiHNqge55JAzyPLDJKwf7/3XVskseXlCsmS9NNZlJjmXrJFX9fFdvww9mN/BuXd/12zeDU0mJSumrv2Xac+qpvQYl2zdvLi4uGg6XMLEeop3w6GB9kJ/CtMqY3x912w2m3dLyErpUy893GdavV6vd2tCaVzc39+vvWKl13sZvexMa+DKsU+zLMveKqtyOSmvqrdZ9pJNgD3ambbrB6DwNplkWfbZMZaVn1mWTUZvP/aGGRTyQTo5tSdv067jONV+58dkVPhpg/cp35M9/vfhtetUu9X+67drMC78N60BDYxv+l+fa5t6/7X/3a9Nf+1K2tM3/3k6rdU2G9/f1GrTvn/zP0gDh77//PD1e81/8P2NX5v2aw9/Hvk3ozd36wjvK+cAAAAASUVORK5CYII=
@@ -13,6 +13,9 @@
 (function () {
    var css = '{display:none !important;height:0 !important}'
 
+//不想屏蔽的功能可以在前面加
+//如:
+   //css += '.abc{display:none !important;}';//展示用
 //主页
    css += '#reportFirst2,#app > div > div.storey-box.b-wrap,.international-footer .partner,.footer_right{display:none !important;}';//推广,广告,主体内容,页脚部分
 //顶栏
@@ -43,12 +46,29 @@
    css += '.up-info .btn-panel .follow-btn{width: 200px !important;}';//关注大小
    css += '.activity-m{display:none !important;}';//活动
 //直播
+
+//右下角粉丝勋章上方官方提供了屏蔽特效和弹幕屏蔽，
+//可以自行手动勾选，因官方已提供部分功能所以本脚本并未添加此部分屏蔽代码。
+
+//刚进直播间会看到右侧弹幕区顶部显示礼物特效信息，
+//是因为官方提供的屏蔽存在一定延迟。
    css += '#right-part > div.shortcuts-ctnr.h-100.f-left > div:nth-child(3){display:none !important;}';//顶栏右边"公会中心"
    css += '#app > div.flying-vm > div > aside > span > div:nth-child(1){display:none !important;}';//右边导航"开播设置"
    css += '#app > div.flying-vm > div > aside > span > div:nth-child(5){display:none !important;}';//右边导航"公会入驻"
    css += '#app > div.flying-vm > div > aside > span > div:nth-child(6){display:none !important;}';//右边导航"公会中心"
-   css += '#app > div.flying-vm > div > aside{height: auto !important;}';//右边导航
+   css += '#app > div.flying-vm > div > aside{height: auto !important;}';//右边导航高度调整
+   css += '.sidebar-btn.a-move-in-left:nth-child(1){display:none !important;}';//分区右边导航"开播设置"
+   css += '.sidebar-btn.a-move-in-left:nth-child(5){display:none !important;}';//分区右边导航"公会入驻"
+   css += '.sidebar-btn.a-move-in-left:nth-child(6){display:none !important;}';//分区右边导航"公会中心"
+   css += '.live-sidebar-ctnr{height: auto !important;}';//分区右边导航高度调整
+   css += '#my-dear-haruna-vm{display:none !important;}';//看板娘
    css += '.flip-view{display:none !important;}';//底部活动
+   css += '.web-player-icon-roomStatus{display:none !important;}';//直播界面右上角logo
+   css += '#live-player > div.web-player-inject-wrap > div > div:nth-child(7){display:none !important;}';//广播
+   css += '.live-title-cntr{display:none !important;}';//活动头衔
+   css += '#head-info-vm > div > a > div > div.blive-avatar-pendant{display:none !important;}';//主播头像框
+   css += '.activity-gather-entry{display:none !important;}';//活动收集条目
+   css += '.info-section{display:none !important;}';//分区榜单
 //滚动条
     css += 'html ::-webkit-scrollbar {width: 6px !important;height: 5px !important;}';//大小
     css += 'html ::-webkit-scrollbar-corner,html ::-webkit-scrollbar-track {background: transparent !important;}';//背景颜色
@@ -71,4 +91,22 @@
 window.onload = function(){
     var result = document.querySelector("#internationalHeader > div > div > div.nav-link > ul > li:nth-child(2)");
     result.innerHTML = `<a href="//www.bilibili.com/v/popular/all" target="_blank" class="link">排行</a>`;
+}
+
+function getSpecificAtags(){
+    var aTags=document.getElementsByTagName('img');
+    var aTagsArray=new Array();
+    for(var i=0;i<aTags.length;i++){
+        if(aTags[i].getAttribute('src')=='http://i0.hdslb.com/bfs/live/bbd9045570d0c022a984c637e406cb0e1f208aa9.png'){
+            aTagsArray.push(aTags[i]);
+        }
+    }
+    return aTagsArray;
+}
+
+window.onload = function(){
+    var aTagsArray=getSpecificAtags();
+    for(var i=0;i<aTagsArray.length;i++){
+    aTagsArray[i].parentNode.removeChild(aTagsArray[i]);
+    }
 }
