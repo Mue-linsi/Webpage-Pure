@@ -162,7 +162,7 @@
    }
 })();
 
-//视频播放页无效,不会改
+//偶尔无效,不会改
 document.body.onload = function(){
     //顶部导航栏"动态"改成排行的"综合热门"
     var resulta = document.querySelector("#internationalHeader > div > div > div.nav-link > ul > li:nth-child(2)");
