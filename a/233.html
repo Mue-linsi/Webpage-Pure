@@ -1,0 +1,36 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>今週のブロック崩し</title>
+<style>
+div#enchant-stage {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+    background-color: #654956;
+}
+</style>
+<script type="text/javascript" charset="utf-8">
+var BLOCK_GAME_WIDTH = 480;
+var BLOCK_GAME_HEIGHT = 640;
+var BLOCK_GAME_FPS = 30;
+var BLOCK_GAME_BALL_SPEED = 8;
+var BLOCK_BAR_MARGIN_BOTTOM = 24;
+var BLOCK_GAME_BLOCK_SIZE = 16;
+var BLOCK_GAME_MIN_BLOCK_PIXEL = 6;
+</script>
+<script src="enchant.min.js"></script>
+<meta name="viewport" content="width=device-width">
+</head><body style="margin:0px; padding: 0px; background-color: #2d1b1e;">
+
+<script type="text/javascript" charset="utf-8">
+var userAgent = navigator.userAgent.toLowerCase();
+if(userAgent.indexOf("iphone") == -1 && userAgent.indexOf("android") == -1) {
+    document.write('<div id="enchant-stage" style="width:480px; height:640px; cursor:hand"></div>');
+}
+</script><div id="enchant-stage" style="width: 480px; height: 640px; position: relative; font-size: 12px; text-size-adjust: none;"><div style="position: absolute; overflow: hidden; transform-origin: 0px 0px; width: 480px; height: 640px; transform: scale(1);"></div><div style="position: absolute; overflow: hidden; transform-origin: 0px 0px; width: 480px; height: 640px; transform: scale(1);"><canvas width="480" height="640" style="position: absolute; top: 0px; left: 0px;"></canvas></div></div>
+
+<script src="bakuretublock001.min.js"></script>
+
+
+
+</body></html>
